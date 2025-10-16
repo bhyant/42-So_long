@@ -6,7 +6,7 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 22:38:46 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 22:39:19 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/16 16:17:05 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	count_lines(char **lines)
 	return (count);
 }
 
-static void	init_grid(t_map *map, char **lines)
+static int	init_grid(t_map *map, char **lines)
 {
 	int	i;
 
@@ -59,8 +59,11 @@ static void	init_grid(t_map *map, char **lines)
 	while (i < map->height)
 	{
 		map->grid[i] = ft_strdup(lines[i]);
+		if (map->grid[i] == NULL)
+			return (EXIT_FAILURE);
 		i++;
 	}
+	return (EXIT_SUCCESS);
 }
 
 t_map	*create_map(char **lines)
@@ -80,7 +83,8 @@ t_map	*create_map(char **lines)
 		free(map);
 		return (NULL);
 	}
-	init_grid(map, lines);
+	if (init_grid(map, lines) == EXIT_FAILURE)
+		return (free(map), NULL);
 	count_elements(map);
 	find_positions(map);
 	return (map);

@@ -6,7 +6,7 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 22:39:58 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 22:40:58 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/16 13:07:01 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ int	check_format(t_map *map)
 int	validate_map(t_map *map)
 {
 	if (!check_format(map))
-		return (0);
+		return (ft_putstr_fd("Error : Map are too big", 2), 0);
 	if (!check_characters(map))
-		return (0);
+		return (ft_putstr_fd("Error : Not reconized char in the map", 2), 0);
 	if (!check_walls(map))
-		return (0);
+		return (ft_putstr_fd("Error : Map are not closed by Wall", 2), 0);
 	if (!check_elements(map))
 		return (0);
 	if (!validate_path(map))
-		return (0);
+		return (ft_putstr_fd("Error : Exit are not reachable", 2), 0);
 	return (1);
 }

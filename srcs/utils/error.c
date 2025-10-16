@@ -6,7 +6,7 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 22:34:51 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 22:37:00 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/16 18:58:10 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ t_map	*parse_and_validate(char *filename)
 	if (!validate_map(map))
 	{
 		cleanup_map(map);
-		exit_error("Invalid map");
+		exit(1);
 		return (NULL);
 	}
 	return (map);

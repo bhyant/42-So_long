@@ -6,7 +6,7 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 18:55:27 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 22:44:33 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/16 13:06:45 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int	check_walls(t_map *map)
 int	check_elements(t_map *map)
 {
 	if (map->player_count != 1)
-		return (0);
+		return (ft_putstr_fd("Error : Map have less or more than 1 player", 2), 0);
 	if (map->exit_count != 1)
-		return (0);
+		return (ft_putstr_fd("Error : Map have less or more than 1 exit", 2), 0);
 	if (map->collectible_count < 1)
-		return (0);
+		return (ft_putstr_fd("Error : Map not have collectible", 2), 0);
 	return (1);
 }
 
