@@ -6,11 +6,11 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 18:44:42 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 23:02:10 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/19 11:54:05 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/so_long.h"
+#include "../includes/so_long.h"
 
 t_game	*init_game(t_map *map)
 {

@@ -6,11 +6,11 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 18:21:25 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 22:45:28 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/19 11:58:07 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/so_long.h"
+#include "../includes/so_long.h"
 
 void	put_tile(t_game *game, void *img, int x, int y)
 {

@@ -6,11 +6,11 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 13:26:24 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 22:41:50 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/19 11:54:12 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/so_long.h"
+#include "../includes/so_long.h"
 
 void	free_grid(char **grid, int height)
 {

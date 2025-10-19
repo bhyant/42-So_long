@@ -6,11 +6,11 @@
 /*   By: tbhuiyan <tbhuiyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 18:42:44 by tbhuiyan          #+#    #+#             */
-/*   Updated: 2025/10/12 23:03:08 by tbhuiyan         ###   ########.fr       */
+/*   Updated: 2025/10/19 11:53:46 by tbhuiyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/so_long.h"
+#include "../includes/so_long.h"
 
 int	is_valid_move(t_game *game, int x, int y)
 {
